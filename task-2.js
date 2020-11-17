@@ -8,7 +8,4 @@ const ingredients = [
     'Приправы',
   ];
 const listIngredients = document.querySelector('#ingredients');
-	for (let item of ingredients) {
-			const element = document.createElement('li');
-			element.textContent = item;
-			listIngredients.append(element);}
+	listIngredients.innerHTML = ingredients.map(value => `<li>${value}</li>`).join('');
